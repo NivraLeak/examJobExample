@@ -23,8 +23,8 @@ public class TipoContribuyenteServiceImpl implements TipoContribuyenteService {
     @Override
     public TipoContribuyenteRest saveTipoContribuyente(TipoContribuyenteRest tipoContribuyenteRest) throws ErrorException {
         TipoContribuyente tipoContribuyente = new TipoContribuyente();
-        tipoContribuyente.setState(tipoContribuyente.getState());
-        tipoContribuyente.setName(tipoContribuyente.getName());
+        tipoContribuyente.setState(tipoContribuyenteRest.getState());
+        tipoContribuyente.setName(tipoContribuyenteRest.getName());
         try {
             tipoContribuyenteRepository.save(tipoContribuyente);
         }catch (final Exception e){

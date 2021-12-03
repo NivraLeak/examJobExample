@@ -8,13 +8,13 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/tipoContribuyente")
-@CrossOrigin()
 public class TipoContribuyenteController {
     @Autowired
     TipoContribuyenteService tipoContribuyenteService;
@@ -27,10 +27,10 @@ public class TipoContribuyenteController {
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @PostMapping("/")
+    @PostMapping()
     @ApiOperation(value = "Save TipoContribuyente", authorizations = { @Authorization(value="JWT") })
-    public CommonResponse<TipoContribuyenteRest> saveTipoContribuyenteById(@RequestBody TipoContribuyenteRest tipoContribuyenteRest) throws ErrorException{
-        return new CommonResponse<>("Succes",String.valueOf(HttpStatus.OK),"OK",tipoContribuyenteService.saveTipoContribuyente(tipoContribuyenteRest));
+    public CommonResponse<TipoContribuyenteRest> saveTipoContribuyenteById(@RequestBody @Validated TipoContribuyenteRest tipoContribuyenteRest) throws ErrorException{
+        return new CommonResponse<>("Success",String.valueOf(HttpStatus.OK),"OK",tipoContribuyenteService.saveTipoContribuyente(tipoContribuyenteRest));
     }
 
 

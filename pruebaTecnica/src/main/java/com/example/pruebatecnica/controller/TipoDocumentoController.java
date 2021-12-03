@@ -15,7 +15,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/tipoDocumento")
-@CrossOrigin()
 public class TipoDocumentoController {
     @Autowired
     TipoDocumentoService tipoDocumentoService;

@@ -18,7 +18,6 @@ import java.util.List;
 @Api(value = "Entidades")
 @RestController
 @RequestMapping(path = "/api/Entidad")
-@CrossOrigin()
 public class EntidadController {
 
     @Autowired
