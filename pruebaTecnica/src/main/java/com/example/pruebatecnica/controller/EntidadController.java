@@ -34,6 +34,7 @@ public class EntidadController {
 
     @ResponseStatus(HttpStatus.OK)
     @PostMapping("/")
+    @ApiOperation(value = "Save Entidad", authorizations = { @Authorization(value="JWT") })
     public CommonResponse<EntidadRest> saveEntidad(@RequestBody EntidadRest entidadRest) throws ErrorException{
         return new CommonResponse<>("Succes",String.valueOf(HttpStatus.OK),"OK",entidadService.saveEntidad(entidadRest));
     }
@@ -41,6 +42,7 @@ public class EntidadController {
 
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("delete/{idEntidad}")
+    @ApiOperation(value = "Delete Entidad", authorizations = { @Authorization(value="JWT") })
     public CommonResponse<String> deleteEntidadById(@PathVariable Integer idEntidad) throws ErrorException{
         return new CommonResponse<>("Succes",String.valueOf(HttpStatus.OK),"OK",entidadService.deleteEntidadById(idEntidad));
     }
@@ -48,6 +50,7 @@ public class EntidadController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{idEntidad}")
+    @ApiOperation(value = "Get Entidad by Id", authorizations = { @Authorization(value="JWT") })
     public CommonResponse<EntidadRest> getEntidadById(@PathVariable Integer idEntidad) throws ErrorException{
         return new CommonResponse<>("Succes",String.valueOf(HttpStatus.OK),"OK",entidadService.getEntidadById(idEntidad));
     }

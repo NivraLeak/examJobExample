@@ -1,4 +1,4 @@
-package com.example.pruebatecnica.controller.config.Security;
+package com.example.pruebatecnica.config.Security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

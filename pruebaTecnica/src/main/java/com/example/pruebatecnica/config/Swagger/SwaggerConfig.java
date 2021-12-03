@@ -1,4 +1,4 @@
-package com.example.pruebatecnica.controller.config.Swagger;
+package com.example.pruebatecnica.config.Swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

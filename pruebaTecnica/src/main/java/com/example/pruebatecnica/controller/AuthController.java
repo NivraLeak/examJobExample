@@ -1,7 +1,7 @@
 package com.example.pruebatecnica.controller;
 
-import com.example.pruebatecnica.controller.config.Security.JWTUtil;
-import com.example.pruebatecnica.controller.config.ServiceSecurity.MyUserDetailsService;
+import com.example.pruebatecnica.config.Security.JWTUtil;
+import com.example.pruebatecnica.config.ServiceSecurity.MyUserDetailsService;
 import com.example.pruebatecnica.dtos.AuthenticationRequest;
 import com.example.pruebatecnica.dtos.AuthenticationResponse;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.example.pruebatecnica.controller.config.ServiceSecurity;
+package com.example.pruebatecnica.config.ServiceSecurity;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,6 +1,6 @@
-package com.example.pruebatecnica.controller.config.Security;
+package com.example.pruebatecnica.config.Security;
 
-import com.example.pruebatecnica.controller.config.ServiceSecurity.MyUserDetailsService;
+import com.example.pruebatecnica.config.ServiceSecurity.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;

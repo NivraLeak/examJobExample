@@ -21,6 +21,7 @@ public class TipoDocumentoController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{idTipoDocumento}")
+    @ApiOperation(value = "Get by id TipoDocumento", authorizations = { @Authorization(value="JWT") })
     public CommonResponse<TipoDocumentoRest> getTipoDocumentoById(@PathVariable Integer idTipoDocumento) throws ErrorException {
         return new CommonResponse<>("Succes",String.valueOf(HttpStatus.OK),"OK",
                 tipoDocumentoService.getTipoDocumentoById(idTipoDocumento));
@@ -28,6 +29,7 @@ public class TipoDocumentoController {
 
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("delete/{idTipoDocumento}")
+    @ApiOperation(value = "Delete TipoDocumento by id", authorizations = { @Authorization(value="JWT") })
     public CommonResponse<String> deleteTipoDocumento(@PathVariable Integer idTipoDocumento) throws ErrorException {
         return new CommonResponse<>("Succes", String.valueOf(HttpStatus.OK),"OK",
                                         tipoDocumentoService.deleteTipoDocumentoById(idTipoDocumento));
@@ -42,6 +44,7 @@ public class TipoDocumentoController {
     }
     @ResponseStatus(HttpStatus.OK)
     @PostMapping()
+    @ApiOperation(value = "Save TipoDocumento", authorizations = { @Authorization(value="JWT") })
     public CommonResponse<TipoDocumentoRest> saveTipoDocumento(@RequestBody @Validated TipoDocumentoRest tipoDocumentoRest ) throws  ErrorException{
         return new CommonResponse<>("Succes",String.valueOf(HttpStatus.OK),"ok",
                 tipoDocumentoService.saveTipoDocumento(tipoDocumentoRest));
