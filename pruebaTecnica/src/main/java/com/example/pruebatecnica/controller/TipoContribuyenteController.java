@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/tipoContribuyente")
+@CrossOrigin()
 public class TipoContribuyenteController {
     @Autowired
     TipoContribuyenteService tipoContribuyenteService;
