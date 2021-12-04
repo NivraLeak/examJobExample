@@ -18,4 +18,7 @@ public class EntidadRest {
     private Integer phone;
 
     private Boolean state;
+
+    private Integer idTipoDocumento;
+    private Integer idTipoContribuyente;
 }

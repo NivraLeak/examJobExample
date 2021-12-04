@@ -39,6 +39,6 @@ public class Entidad {
     private TipoContribuyente tipoContribuyente;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tipo_documento_id_tipo_documento", unique = true)
+    @JoinColumn(name = "id_tipo_documento", unique = true)
     private TipoDocumento tipoDocumento;
 }

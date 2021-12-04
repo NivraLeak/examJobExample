@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/tipoContribuyente")
+@CrossOrigin(originPatterns = "http://localhost:4200")
 public class TipoContribuyenteController {
     @Autowired
     TipoContribuyenteService tipoContribuyenteService;
